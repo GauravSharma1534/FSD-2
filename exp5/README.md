@@ -57,7 +57,8 @@ src/
 └── index.css
 
 
-Technical Concept: Lazy Loading
+# Technical Concept: Lazy Loading# 
+
 Lazy loading allows components to be loaded only when they are needed. Instead of importing components normally, they are imported dynamically using React.lazy().
 
 **Suspense** is used to show a fallback UI while the component is being loaded.
@@ -68,6 +69,7 @@ Page load time
 Unnecessary resource usage
 
 # Technical #
+
 SPA created using React and Vite
 Routing implemented using React Router
 Components imported using **React.lazy()**
@@ -75,7 +77,7 @@ Components imported using **React.lazy()**
 Navigation links added for Home, About, and Contact
 Footer added with UID and student name
 
-Output
+# Output #
 Application run ki using:
   npm run dev
 Home page sabse pehle load hota hai
@@ -91,18 +93,21 @@ Faster initial load time
 Smooth navigation without page reload
 
 # Learning Outcomes #
+
 Lazy loading ka practical understanding
 SPA performance optimization techniques
 Dynamic component loading in React
 Efficient resource usage
 
 # Applications #
+
 Large scale web applications
 Dashboards
 E-commerce websites
 Content heavy SPAs
 
 # Deployment Details #
+
 Application built using Vite
 Project executed locally using:
    npm run dev
