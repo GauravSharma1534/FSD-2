@@ -47,8 +47,6 @@ CSS3
 
  # Project Structure #
  
- // text //
-
 src/
 ├── components/
 │   ├── Home.jsx
@@ -58,7 +56,6 @@ src/
 ├── main.jsx
 └── index.css
 
-// text //
 
 Technical Concept: Lazy Loading
 Lazy loading allows components to be loaded only when they are needed. Instead of importing components normally, they are imported dynamically using React.lazy().
