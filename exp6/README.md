@@ -5,66 +5,65 @@ Handle Forms and Validations in Frontend
 To design and implement a frontend form with proper handling and validation to ensure correct and reliable user input.
 
 # Objective #
-To create a registration form in the frontend
-To manage form data using state
-To apply client-side validations
-To follow unidirectional data flow
-To display output only after successful validation
+* To create a registration form in the frontend
+* To manage form data using state
+* To apply client-side validations
+* To follow unidirectional data flow
+* To display output only after successful validation
 
 # Introduction #
 Frontend forms are used to collect user data such as name, email, password, age, and contact number. Handling forms means managing user input through state, while validation ensures that incorrect or empty data is not submitted.
-In this experiment, a registration form is built using React. All validations are performed on the client side to improve performance and user experience.
+* In this experiment, a registration form is built using React. All validations are performed on the client side to improve performance and user experience.
 
 # Redux Follows a Unidirectional Data Flow #
-Unidirectional data flow means data moves in one direction only:
-User enters data in input fields
-Data is stored in the component state
-UI updates based on the state
-This approach makes the application predictable, easier to debug, and maintainable.
+* Unidirectional data flow means data moves in one direction only:
+* User enters data in input fields
+* Data is stored in the component state
+* UI updates based on the state
+* This approach makes the application predictable, easier to debug, and maintainable.
 
  # Problem Statement #
 To develop a frontend form that validates user input, shows error messages for invalid fields, and allows submission only when all inputs are valid.
 
 # Libraries Used #
-React – To build UI components
-React Hooks (useState) – To manage form state and errors
-Vite – For fast development and build process
-JavaScript (ES6) – For validation logic
-HTML5 – For form structure
-CSS3 – For styling the form
+* React – To build UI components
+* React Hooks (useState) – To manage form state and errors
+* Vite – For fast development and build process
+* JavaScript (ES6) – For validation logic
+* HTML5 – For form structure
+* CSS3 – For styling the form
 
 # Software Requirements #
-Node.js
-npm
-React.js
-Vite
-Web Browser (Chrome/Edge)
+* Node.js
+* npm
+* React.js
+* Vite
+* Web Browser (Chrome/Edge)
 
  # Project Structure #
 
- // text //
-
- src/
+ ```text
+src/
 │── components/
 │   └── Form.jsx
 │── App.jsx
 │── main.jsx
 │── index.css
+```
 
- //text //
 
  # Features # 
- Age input field
- Contact number input field
- Gender selection (Male, Female, Transgender)
- Terms and conditions checkbox
- Real-time error messages
- Client-side validation before submission
+ * Age input field
+ * Contact number input field
+ * Gender selection (Male, Female, Transgender)
+ * Terms and conditions checkbox
+ * Real-time error messages
+ * Client-side validation before submission
 
  # Technical Explanation #
- **useState** hook ka use karke form data store kiya
- Har input ko controlled component banaya
- **onChange** event se state update ki
+ * **useState** hook ka use karke form data store kiya
+*  Har input ko controlled component banaya
+ * **onChange** event se state update ki
  Submit se pehle validation function call kiya
  Valdation rules lagaye:
    Empty field check
