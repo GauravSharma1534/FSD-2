@@ -88,23 +88,25 @@ Modular and reusable component structure
 ## Project Structure
 
 src/
-│── assets/
+├── assets/
 │
-│── components/
-│   └── context/
-│       ├── CounterGlobalContextAPI.jsx
+├── components/
+│
+├── context/
+│   ├── CounterGlobalContextAPI.jsx
 │   ├── CounterGlobalContextParent.jsx
 │   ├── CounterLocalState.jsx
 │   └── CounterReduxParent.jsx
 │
-│── store/
+├── store/
 │   ├── CounterReducer.jsx
 │   └── Store.jsx
 │
-│── App.css
-│── App.jsx
-│── index.css
-│── main.jsx
+├── App.css
+├── App.jsx
+├── index.css
+└── main.jsx
+
 
 ## Output
 
