@@ -35,7 +35,7 @@ It is successfully deployed on **Netlify**.
 
 ## Deployment
 The project is deployed on Netlify.  
-🔗 **Live URL:** *(paste your Netlify link here)*
+🔗 **Live URL:** **https://23bda70050-experiment-2-gaurav.netlify.app/**
 
 ## Learning Outcomes of Experiment
 After completing this experiment, I learned:
