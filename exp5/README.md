@@ -1,17 +1,13 @@
-Experiment – 5
+# Experiment – 5 #
 Optimize Frontend Performance Using Lazy Loading
-Aim
 
+# Aim #
 To optimize frontend performance of a Single Page Application by implementing lazy loading for components.
 
-Objectives
-
+# Objectives #
 To understand lazy loading in frontend applications
-
 To reduce initial page load time
-
 To load components only when required
-
 To improve performance and user experience in a Single Page Application
 
 Introduction
