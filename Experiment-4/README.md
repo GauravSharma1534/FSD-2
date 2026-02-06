@@ -7,10 +7,10 @@ Experiment – 4
 
 ## Objective
 
-To understand the concept of state in React
-To implement component-level state using the useState hook
-To manage application-wide state using Redux
-To analyze the difference between local and global state management
+* To understand the concept of state in React
+* To implement component-level state using the useState hook
+* To manage application-wide state using Redux
+* To analyze the difference between local and global state management
 
 ## Introduction
 
@@ -31,9 +31,9 @@ Global state is used when multiple components require access to the same data. R
 
 ## Redux follows a unidirectional data flow:
 
-Action triggers a state change
-Reducer updates the store
-Updated state is reflected in components
+* Action triggers a state change
+* Reducer updates the store
+* Updated state is reflected in components
 
 ## Problem Statement
 
@@ -41,18 +41,14 @@ As React applications grow in size, managing shared data between components beco
 
 ## Software and Hardware Requirements
 
-Software Requirements
-Node.js and npm
-React JS
-Vite
-Redux and React Redux
-Code editor (VS Code recommended)
-Web browser
+* Software Requirements
+* Node.js and npm
+* React JS
+* Vite
+* Redux and React Redux
+* Code editor (VS Code recommended)
+* Web browser
 
-## Hardware Requirements
-
-Minimum 4 GB RAM
-Any modern operating system
 
 ## Experiment Description
 
@@ -64,26 +60,26 @@ Uses the useState hook where the state remains within a single component.
 
 ## Global State Counter
 
-Uses Redux to store state in a centralized store, making it accessible across multiple components using the Provider.
-This comparison clearly highlights the advantages and use cases of each approach.
+* Uses Redux to store state in a centralized store, making it accessible across multiple components using the Provider.
+* This comparison clearly highlights the advantages and use cases of each approach.
 
 ## Technologies Used
 
-React JS
-Redux
-React Redux
-Vite
-JavaScript (ES6)
-HTML5
-CSS3
+* React JS
+* Redux
+* React Redux
+* Vite
+* JavaScript (ES6)
+* HTML5
+* CSS3
 
 ## Features Implemented
 
-Increment, decrement, and reset counter operations
-Local state management using useState
-Global state management using Redux Store
-Centralized and predictable state updates
-Modular and reusable component structure
+* Increment, decrement, and reset counter operations
+* Local state management using useState
+* Global state management using Redux Store
+* Centralized and predictable state updates
+* Modular and reusable component structure
 
 ## Project Structure
 
@@ -112,30 +108,30 @@ src/
 
 ## Output
 
-A functional counter using local state
-A functional counter using Redux global state
-Real-time UI updates when state changes
+* A functional counter using local state
+* A functional counter using Redux global state
+* Real-time UI updates when state changes
 
 ## Learning Outcomes
 
-After completing this experiment, the learner will be able to:
-Understand how state works in React
-Differentiate between local and global state
-Implement useState for component-level data
-Use Redux for centralized state management
-Develop scalable and maintainable React applications
+* After completing this experiment, the learner will be able to:
+* Understand how state works in React
+* Differentiate between local and global state
+* Implement useState for component-level data
+* Use Redux for centralized state management
+* Develop scalable and maintainable React applications
 
 ## Applications
 
-User dashboards
-Shopping cart systems
-Authentication and user session handling 
-Data-driven web applications
+* User dashboards
+* Shopping cart systems
+* Authentication and user session handling 
+* Data-driven web applications
 
 ## GitHub Upload Details
 
-The complete source code is uploaded to GitHub for version control and reference.
-GitHub Repository:
+* The complete source code is uploaded to GitHub for version control and reference.
+* GitHub Repository:
 **https://github.com/GauravSharma1534/FSD-2** 
 
 ## Deployment Details
@@ -146,10 +142,10 @@ Live Project (Netlify):
 
 ## Future Scope
 
-Use of Redux Toolkit for simplified configuration
-Integration with backend APIs
-Advanced state handling using middleware
-Improved UI and performance optimization
+* Use of Redux Toolkit for simplified configuration
+* Integration with backend APIs
+* Advanced state handling using middleware
+* Improved UI and performance optimization
 
 ## Conclusion
 
