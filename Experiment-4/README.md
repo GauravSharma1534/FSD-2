@@ -87,6 +87,7 @@ Modular and reusable component structure
 
 ## Project Structure
 
+```text
 src/
 ├── assets/
 │
@@ -106,6 +107,7 @@ src/
 ├── App.jsx
 ├── index.css
 └── main.jsx
+```
 
 
 ## Output
