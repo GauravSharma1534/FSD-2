@@ -1,24 +1,30 @@
-# Experiment – 5 #
-Optimize Frontend Performance Using Lazy Loading
-
-# Aim #
 To optimize frontend performance of a Single Page Application by implementing lazy loading for components.
 
-# Objectives #
-. To understand lazy loading in frontend applications
-. To reduce initial page load time
-. To load components only when required
-. To improve performance and user experience in a Single Page Application
+Objectives
+
+To understand lazy loading in frontend applications
+
+To reduce initial page load time
+
+To load components only when required
+
+To improve performance and user experience in a Single Page Application
 
 Introduction
 
-In Single Page Applications, loading all components at once increases the initial page load time and negatively affects performance. Lazy loading is a technique in which components are loaded only when the user navigates to them.
+In Single Page Applications, loading all components at once increases initial load time.
 
-In this experiment, a React-based Single Page Application is developed with multiple pages such as Home, About, and Contact. These components are loaded lazily using React’s lazy loading feature, which helps improve frontend performance and reduce unnecessary resource usage.
+This negatively affects application performance and user experience.
+
+Lazy loading is a technique in which components are loaded only when the user navigates to them.
+
+In this experiment, a React-based SPA is created with Home, About, and Contact pages.
+
+These components are loaded lazily using React lazy loading to improve performance.
 
 Problem Statement
 
-To design a Single Page Application that loads components dynamically instead of loading everything at once, thereby optimizing frontend performance.
+To design a Single Page Application that dynamically loads components instead of loading all components at once, thereby optimizing frontend performance.
 
 Libraries Used
 
@@ -60,11 +66,13 @@ src/
 
 Technical Concept: Lazy Loading
 
-Lazy loading allows components to be loaded only when they are needed. Instead of importing components normally, they are imported dynamically using React.lazy().
+Lazy loading loads components only when required.
 
-Suspense is used to display a fallback user interface while the component is being loaded.
+Components are imported dynamically using React.lazy().
 
-This reduces:
+Suspense is used to display a fallback UI while components load.
+
+This helps in reducing:
 
 Initial bundle size
 
@@ -74,49 +82,49 @@ Unnecessary resource usage
 
 Technical Description
 
-Single Page Application created using React and Vite
+Single Page Application developed using React and Vite.
 
-Routing implemented using React Router
+Routing implemented using React Router.
 
-Components imported using React.lazy()
+Components imported using React.lazy().
 
-Suspense used to handle loading state
+Suspense used to handle loading state.
 
-Navigation links added for Home, About, and Contact
+Navigation links provided for Home, About, and Contact pages.
 
-Footer added with student name and UID
+Footer added with student name and UID.
 
 Output
 
-Application executed using npm run dev
+Application executed using npm run dev.
 
-Home page loads first
+Home page loads first.
 
-About and Contact components load only when clicked
+About and Contact components load only when clicked.
 
-Page does not reload, maintaining SPA behavior
+Page does not reload, maintaining SPA behavior.
 
-Lazy loading verified through browser console and network tab
+Lazy loading verified using browser console and network tab.
 
 Result
 
-SPA successfully loaded in the browser
+SPA successfully loaded in the browser.
 
-Home, About, and Contact pages load dynamically
+Home, About, and Contact pages loaded dynamically.
 
-Faster initial load time achieved
+Faster initial page load time achieved.
 
-Smooth navigation without page reload
+Smooth navigation without page reload observed.
 
 Learning Outcomes
 
-Practical understanding of lazy loading
+Understood the concept of lazy loading.
 
-Knowledge of SPA performance optimization techniques
+Learned SPA performance optimization techniques.
 
-Experience with dynamic component loading in React
+Gained experience in dynamic component loading using React.
 
-Efficient resource usage
+Learned efficient resource utilization.
 
 Applications
 
@@ -130,17 +138,17 @@ Content-heavy Single Page Applications
 
 Deployment Details
 
-Application built using Vite
+Application built using Vite.
 
-Project executed locally using npm run dev
+Project executed locally using npm run dev.
 
-Output verified in the browser
+Output verified in the browser.
 
-Netlify Deployment
+Application deployed on Netlify.
 
 Live URL:
 https://experiment-5-23bda70050-gaurav-fsd.netlify.app/
 
 Conclusion
 
-This experiment demonstrates how lazy loading can be used to optimize frontend performance in a Single Page Application. By loading components only when required, the initial load time is reduced and the overall user experience is significantly improved.
+This experiment demonstrates the use of lazy loading to optimize frontend performance in a Single Page Application. By loading components only when required, initial load time is reduced and overall user experience is improved.
