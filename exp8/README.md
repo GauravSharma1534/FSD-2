@@ -93,6 +93,7 @@ DELETE	         /students/<id>	  **Delete student**
 **200 → Success**
 
 **201 → Created**
+
 **400 → Bad Request**
 
 **404 → Not Found**
@@ -108,13 +109,17 @@ Home Route:
 All CRUD APIs tested successfully:
 
 **POST → 201 Created**
+
 **GET → 200 OK**
+
 **PUT → 200 OK**
+
 ****DELETE → 200 OK**
 
 # Deployment #
 
 Code pushed to **GitHub**
+
 Connected to **Render**
 
 Build Command:
@@ -128,10 +133,15 @@ Build Command:
 # Learning Outcomes #
 
 **Backend development using Flask**
+
 **REST API implementation**
+
 **CRUD** operations
+
 **JSON** handling
+
 **API testing with Postman**
+
 **Cloud deployment on Render**
 
  # Conclusion #
