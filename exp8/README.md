@@ -112,7 +112,7 @@ All CRUD APIs tested successfully:
 
 **PUT → 200 OK**
 
-****DELETE → 200 OK**
+**DELETE → 200 OK**
 
 # Deployment #
 
