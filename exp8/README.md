@@ -9,47 +9,66 @@ To develop a RESTful backend server using Flask and implement CRUD operations fo
 # Objective #
 
 To understand **backend development using Flask**
+
 To implement **REST APIs**
+
 To perform **CRUD operations**
+
 To test **APIs using Postman**
+
 To deploy the backend on **Render**
 
 # Languages Used #
+
 **Python** (Core Backend Language)
+
 **JSON**(Data exchange format)
+
 **Bash/CLI** (Server execution & deployment)
 
 ## Technologies & Tools ##
 
 Flask
+
 Gunicorn
 Postman
+
 Git & GitHub
+
 Render
 
  # Project Structure #
 
+
+```
 project/
 │
 ├── app.py
 ├── run.py
 ├── requirements.txt
 └── routes/
-      └── student_routes.py
+    └── student_routes.py
+```
 
 # Working #
 
 Flask server handles **HTTP requests**.
+
 CRUD operations are implemented **using REST principles**.
+
 Student data is stored in an **in-memory list**.
+
 JSON is used for request and response format.
 
 **Example Student Object:**
 
 {
   "id": **1**,
+  
   "name": **"Gaurav Sharma"**,
+  
   "uid": **"23bda70050"**,
+  
   "age": **21**
 }
 
@@ -58,17 +77,24 @@ JSON is used for request and response format.
 # API Endpoints #
 
 Method      	Endpoint	    Purpose
+
 POST	       /students	   **Create student**
+
 GET	           /students	   **Get all students**
+
 GET	         **/students/<id>**	**Get student by ID**
+
 PUT	            /students/<id>	 **Update student**
+
 DELETE	         /students/<id>	  **Delete student**
 
 # HTTP Status Codes Used #
 
 **200 → Success**
+
 **201 → Created**
 **400 → Bad Request**
+
 **404 → Not Found**
 
 # Postman Output #
