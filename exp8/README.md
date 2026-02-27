@@ -66,9 +66,7 @@ JSON is used for request and response format.
   "id": **1**,
   
   "name": **"Gaurav Sharma"**,
-  
   "uid": **"23bda70050"**,
-  
   "age": **21**
 }
 
