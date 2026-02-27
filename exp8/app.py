@@ -1,16 +1,20 @@
 from flask import Flask
-from routes.student_routes import student_bp
+# from routes.student_routes import student_bp
+# from middleware.logger import register_middlewares
 
 def create_app():
     app = Flask(__name__)
-    app.register_blueprint(student_bp)
+
+    # Register Blueprints
+    # app.register_blueprint(student_bp)
+
+    # Register Middlewares
+    # register_middlewares(app)
+
     return app
 
 app = create_app()
 
 @app.route("/")
 def home():
-    return {"message": "Gaurav Sharma"}
-
-if __name__ == "__main__":
-    app.run(debug=True)
+    return {"message": "gaurav"}
