@@ -101,8 +101,8 @@ PUT /orders/1/status
 
 Both services were deployed on Render platform:
 
-* Order Service: *(add link here)*
-* Customer Service: *(add link here)*
+* Order Service: **(https://experiment-11-23bda70050-gaurav-sharma-1-6gig.onrender.com/)**
+* Customer Service: **(https://experiment-11-23bda70050-gaurav-sharma-rvly.onrender.com/)**
 
 ---
 
