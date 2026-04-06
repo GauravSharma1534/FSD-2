@@ -62,3 +62,13 @@ SELECT * FROM students;
 
 ## **Conclusion**
 Successfully implemented Flask backend with MySQL database and performed CRUD operations with validation.
+
+##  Learning Outcomes
+
+- Understood how to build backend using Flask (Python)
+- Learned to create REST APIs (GET, POST, PUT, DELETE)
+- Connected Flask application with MySQL database
+- Performed CRUD operations on database
+- Implemented input validation and error handling
+- Tested APIs using Postman
+- Gained knowledge of frontend-backend integration
