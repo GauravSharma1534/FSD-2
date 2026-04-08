@@ -18,6 +18,20 @@ To develop a Flask-based backend application connected with a database and perfo
 - Postman
 - Render
 
+##  Experiment Details
+
+Created backend server using Flask
+
+Designed REST APIs for Student CRUD operations
+
+Connected backend with database
+
+Stored student data in students table
+
+Performed validation using Marshmallow
+
+Tested APIs using Postman
+
 ---
 
 ##  Features
@@ -72,6 +86,22 @@ python app.py
 ##  Live API
 
 👉**https://experiment-13-23bda70050-gaurav-sharma-6.onrender.com/**
+
+## Postman Testing
+
+POST → Data inserted successfully
+
+GET → Data retrieved successfully
+
+PUT → Data updated successfully
+
+DELETE → Data deleted successfully
+
+## Database
+
+Table Name: students
+
+Fields: id, uid, name, age
 
 # Postman Testing
 
