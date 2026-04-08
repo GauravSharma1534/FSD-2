@@ -51,11 +51,7 @@ To develop a Flask-based backend application connected with a database and perfo
 | GET    | /students/search?name=xyz | Search student |
 | GET    | /students/count | Total students |
 
----
-
-##  Sample JSON
-
-```json
+json
 {
   "uid": "CU101",
   "name": "Gaurav Sharma",
