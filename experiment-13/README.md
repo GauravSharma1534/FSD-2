@@ -1,16 +1,16 @@
-# 🚀 Experiment 13 – Flask CRUD API
+#  Experiment 13 – Flask CRUD API
 
-## 📌 Title
+##  Title
 Flask Backend with Database Integration for CRUD Operations and Validation
 
 ---
 
-## 🎯 Objective
+##  Objective
 To develop a Flask-based backend application connected with a database and perform CRUD operations (Create, Read, Update, Delete) with validation and error handling.
 
 ---
 
-## 🛠️ Technologies Used
+##  Technologies Used
 - Python (Flask)
 - SQLite (for deployment)
 - SQLAlchemy
@@ -20,7 +20,7 @@ To develop a Flask-based backend application connected with a database and perfo
 
 ---
 
-## ⚙️ Features
+##  Features
 - Create Student
 - Read All Students
 - Read Single Student
@@ -33,13 +33,13 @@ To develop a Flask-based backend application connected with a database and perfo
 
 ---
 
-## 🗄️ Database
+##  Database
 - Database: SQLite (`database.db`)
 - Table: `students`
 
 ---
 
-## 🔗 API Endpoints
+##  API Endpoints
 
 | Method | Endpoint | Description |
 |--------|---------|------------|
@@ -51,22 +51,18 @@ To develop a Flask-based backend application connected with a database and perfo
 | GET    | /students/search?name=xyz | Search student |
 | GET    | /students/count | Total students |
 
----
 
-## 📥 Sample JSON
-
-```json
 {
   "uid": "CU101",
   "name": "Gaurav Sharma",
   "age": 21
 }
-▶️ Run Project (Local)
+Run Project (Local)
 python -m venv venv
 venv\Scripts\activate
 pip install -r requirements.txt
 python app.py
-🌐 Live API
+ Live API
 
 👉 https://experiment-13-23bda70050-gaurav-sharma-6.onrender.com/
 
@@ -75,20 +71,20 @@ POST → Insert student data
 GET → Fetch all students
 PUT → Update student
 DELETE → Delete student
-📊 Example Response
+ Example Response
 {
   "id": 1,
   "uid": "CU101",
   "name": "Gaurav Sharma",
   "age": 21
 }
-🗃️ Database Verification
+Database Verification
 SELECT * FROM students;
-📌 Conclusion
+ Conclusion
 
 Successfully developed a Flask backend application with database integration and implemented full CRUD operations along with validation and error handling.
 
-🎓 Learning Outcomes
+ Learning Outcomes
 Learned Flask backend development
 Understood REST API concepts
 Connected backend with database
