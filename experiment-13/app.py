@@ -1,11 +1,14 @@
 from flask import Flask, request, jsonify
 from flask_sqlalchemy import SQLAlchemy
 from marshmallow import Schema, fields, validate, ValidationError
+import pymysql
+
+pymysql.install_as_MySQLdb()
 
 app = Flask(__name__)
 
-# ✅ SQLite Database (Render compatible)
-app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///database.db'
+# Update MySQL credentials below
+app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+pymysql://root:root123@localhost/chandigarh_university_db'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
 db = SQLAlchemy(app)
@@ -101,16 +104,10 @@ def delete_student(id):
     db.session.commit()
     return jsonify({"message": "Student deleted successfully"})
 
-# ===============================
-# Home Route
-# ===============================
 @app.route('/')
 def home():
-    return jsonify({"message": "Flask SQLite Students CRUD API Running"})
+    return jsonify({"message": "Flask MySQL Students CRUD API with Validation Running"})
 
-# ===============================
-# Run App
-# ===============================
 if __name__ == '__main__':
     with app.app_context():
         db.create_all()
