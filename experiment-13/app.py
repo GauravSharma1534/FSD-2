@@ -1,14 +1,11 @@
 from flask import Flask, request, jsonify
 from flask_sqlalchemy import SQLAlchemy
 from marshmallow import Schema, fields, validate, ValidationError
-import pymysql
-
-pymysql.install_as_MySQLdb()
 
 app = Flask(__name__)
 
-# Update MySQL credentials below
-app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+pymysql://root:root123@localhost/chandigarh_university_db'
+
+app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///database.db'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
 db = SQLAlchemy(app)
@@ -43,14 +40,14 @@ student_schema = StudentSchema()
 student_update_schema = StudentSchema(partial=True)
 
 # ===============================
-# Global Error Handler
+# Error Handler
 # ===============================
 @app.errorhandler(ValidationError)
 def handle_validation_error(e):
     return jsonify({"validation_errors": e.messages}), 400
 
 # ===============================
-# CREATE Student
+# CREATE
 # ===============================
 @app.route('/students', methods=['POST'])
 def create_student():
@@ -64,7 +61,7 @@ def create_student():
     return jsonify(student.to_dict()), 201
 
 # ===============================
-# READ All Students
+# READ ALL
 # ===============================
 @app.route('/students', methods=['GET'])
 def get_students():
@@ -72,7 +69,7 @@ def get_students():
     return jsonify([s.to_dict() for s in students])
 
 # ===============================
-# READ One Student
+# READ ONE
 # ===============================
 @app.route('/students/<int:id>', methods=['GET'])
 def get_student(id):
@@ -80,7 +77,7 @@ def get_student(id):
     return jsonify(student.to_dict())
 
 # ===============================
-# UPDATE Student
+# UPDATE
 # ===============================
 @app.route('/students/<int:id>', methods=['PUT'])
 def update_student(id):
@@ -95,7 +92,7 @@ def update_student(id):
     return jsonify(student.to_dict())
 
 # ===============================
-# DELETE Student
+# DELETE
 # ===============================
 @app.route('/students/<int:id>', methods=['DELETE'])
 def delete_student(id):
@@ -106,9 +103,13 @@ def delete_student(id):
 
 @app.route('/')
 def home():
-    return jsonify({"message": "Flask MySQL Students CRUD API with Validation Running"})
+    return jsonify({"message": "Flask SQLite CRUD API Running"})
 
+# ===============================
+# RUN
+# ===============================
 if __name__ == '__main__':
     with app.app_context():
         db.create_all()
     app.run(host="0.0.0.0", port=5000, debug=True)
+
