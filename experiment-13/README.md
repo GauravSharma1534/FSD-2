@@ -1,74 +1,73 @@
-# **Experiment 13 - Flask MySQL CRUD API**
+#  Experiment 13 – Flask CRUD API
 
-## **Title**
-Connect backend with database and perform CRUD operations along with validations 
+##  Title
+Flask Backend with Database Integration for CRUD Operations and Validation
 
-## **Objective**
-To build a Flask backend and connect it with MySQL database to perform CRUD operations with validation.
+---
 
-## **Technologies Used**
-- **Python (Flask)**
-- **MySQL**
-- **SQLAlchemy**
-- **Marshmallow**
-- **PyMySQL**
-- **Postman**
-- **Render**
+##  Objective
+To develop a Flask-based backend application connected with a database and perform CRUD operations (Create, Read, Update, Delete) with validation and error handling.
 
-## **Features**
-- **Create Student**
-- **Read All Students**
-- **Read Single Student**
-- **Update Student**
-- **Delete Student**
-- **Validation**
-- **Database Connectivity**
+---
 
-## **Database**
-**Database Name:** chandigarh_university_db  
-**Table Name:** students  
+##  Technologies Used
+- Python (Flask)
+- SQLite (for deployment)
+- SQLAlchemy
+- Marshmallow
+- Postman
+- Render
 
-## **API Endpoints**
-- **POST /students**
-- **GET /students**
-- **GET /students/<id>**
-- **PUT /students/<id>**
-- **DELETE /students/<id>**
+---
 
-## **Sample JSON**
+##  Features
+- Create Student
+- Read All Students
+- Read Single Student
+- Update Student
+- Delete Student
+- Input Validation
+- Error Handling
+- Search Student (Bonus)
+- Count Students (Bonus)
+
+---
+
+##  Database
+- Database: SQLite (`database.db`)
+- Table: `students`
+
+---
+
+##  API Endpoints
+
+| Method | Endpoint | Description |
+|--------|---------|------------|
+| POST   | /students | Create new student |
+| GET    | /students | Get all students |
+| GET    | /students/<id> | Get single student |
+| PUT    | /students/<id> | Update student |
+| DELETE | /students/<id> | Delete student |
+| GET    | /students/search?name=xyz | Search student |
+| GET    | /students/count | Total students |
+
+---
+
+##  Sample JSON
+
+```json
 {
-  "uid": "CU001",
-  "name": "Gaurav",
+  "uid": "CU101",
+  "name": "Gaurav Sharma",
   "age": 21
 }
 
-## **Run Project**
-1. python -m venv venv  
-2. venv\Scripts\activate  
-3. pip install flask flask-sqlalchemy pymysql marshmallow cryptography  
-4. python app.py  
+##  Live API
+**https://experiment-13-23bda70050-gaurav-sharma-6.onrender.com/**
 
-## **Output**
-http://127.0.0.1:5000  
+# Postman Testing
 
-## **Postman Testing**
-- POST → Data inserted successfully  
-- GET → Data retrieved successfully  
-- PUT → Data updated successfully  
-- DELETE → Data deleted successfully  
-
-## **Database Verification**
-SELECT * FROM students;
-
-## **Conclusion**
-Successfully implemented Flask backend with MySQL database and performed CRUD operations with validation.
-
-##  Learning Outcomes
-
-- Understood how to build backend using Flask (Python)
-- Learned to create REST APIs (GET, POST, PUT, DELETE)
-- Connected Flask application with MySQL database
-- Performed CRUD operations on database
-- Implemented input validation and error handling
-- Tested APIs using Postman
-- Gained knowledge of frontend-backend integration
+POST → Insert student data
+GET → Fetch all students
+PUT → Update student
+DELETE → Delete student
