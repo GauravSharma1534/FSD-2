@@ -4,7 +4,6 @@ from marshmallow import Schema, fields, validate, ValidationError
 
 app = Flask(__name__)
 
-
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///database.db'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
@@ -14,7 +13,6 @@ db = SQLAlchemy(app)
 # Student Model
 # ===============================
 class Student(db.Model):
-    __tablename__ = "students"
     id = db.Column(db.Integer, primary_key=True)
     uid = db.Column(db.String(20), unique=True, nullable=False)
     name = db.Column(db.String(100), nullable=False)
@@ -25,7 +23,7 @@ class Student(db.Model):
             "id": self.id,
             "uid": self.uid,
             "name": self.name,
-            "age": self.age,
+            "age": self.age
         }
 
 # ===============================
@@ -51,14 +49,19 @@ def handle_validation_error(e):
 # ===============================
 @app.route('/students', methods=['POST'])
 def create_student():
-    data = request.get_json()
-    validated_data = student_schema.load(data)
+    try:
+        data = request.get_json()
+        validated_data = student_schema.load(data)
 
-    student = Student(**validated_data)
-    db.session.add(student)
-    db.session.commit()
+        student = Student(**validated_data)
+        db.session.add(student)
+        db.session.commit()
 
-    return jsonify(student.to_dict()), 201
+        return jsonify(student.to_dict()), 201
+
+    except Exception as e:
+        db.session.rollback()
+        return jsonify({"error": str(e)}), 500
 
 # ===============================
 # READ ALL
@@ -101,15 +104,21 @@ def delete_student(id):
     db.session.commit()
     return jsonify({"message": "Student deleted successfully"})
 
+# ===============================
+# HOME
+# ===============================
 @app.route('/')
 def home():
-    return jsonify({"message": "Flask SQLite CRUD API Running"})
+    return jsonify({"message": "API Working ✅"})
+
+# ===============================
+# INIT DB (IMPORTANT)
+# ===============================
+with app.app_context():
+    db.create_all()
 
 # ===============================
 # RUN
 # ===============================
 if __name__ == '__main__':
-    with app.app_context():
-        db.create_all()
-    app.run(host="0.0.0.0", port=5000, debug=True)
-
+    app.run(debug=True)
