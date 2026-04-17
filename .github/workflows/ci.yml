@@ -7,39 +7,36 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Checkout code
-      uses: actions/checkout@v3
+    - uses: actions/checkout@v3
 
-    # 🔹 Python setup
-    - name: Setup Python
-      uses: actions/setup-python@v4
+    # 🔹 Python Setup
+    - uses: actions/setup-python@v4
       with:
-        python-version: '3.11'
+        python-version: "3.11"
 
-    # 🔹 Backend install
     - name: Install backend dependencies
-      working-directory: Experiment-16/backend
       run: |
+        cd Experiment-16/backend
         python -m pip install --upgrade pip
         pip install flask pytest
 
-    # 🔹 Backend test
     - name: Run backend tests
-      working-directory: Experiment-16/backend
-      run: python -m pytest
+      run: |
+        cd Experiment-16/backend
+        python -m pytest
 
-    # 🔹 Node setup
-    - name: Setup Node
-      uses: actions/setup-node@v3
+    # 🔹 Node Setup
+    - uses: actions/setup-node@v3
       with:
-        node-version: '18'
+        node-version: "18"
 
-    # 🔹 Frontend install
     - name: Install frontend dependencies
-      working-directory: Experiment-16/frontend
-      run: npm install
+      run: |
+        cd Experiment-16/frontend
+        npm install
+        npm install jest
 
-    # 🔹 Frontend test
     - name: Run frontend tests
-      working-directory: Experiment-16/frontend
-      run: npx jest
+      run: |
+        cd Experiment-16/frontend
+        npx jest
