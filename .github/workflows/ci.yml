@@ -13,7 +13,7 @@ jobs:
     - name: Checkout code
       uses: actions/checkout@v3
 
-    # ---------- BACKEND ----------
+    # ---------------- BACKEND ----------------
     - name: Setup Python
       uses: actions/setup-python@v4
       with:
@@ -30,7 +30,7 @@ jobs:
       run: |
         python -m pytest
 
-    # ---------- FRONTEND ----------
+    # ---------------- FRONTEND ----------------
     - name: Setup Node
       uses: actions/setup-node@v3
       with:
@@ -40,9 +40,14 @@ jobs:
       working-directory: Experiment-16/frontend
       run: |
         npm install
-        npm install --save-dev jest   # 🔥 IMPORTANT FIX
+
+    # 🔥 IMPORTANT FIX (JEST INSTALL)
+    - name: Ensure Jest installed
+      working-directory: Experiment-16/frontend
+      run: |
+        npm install --save-dev jest
 
     - name: Run frontend tests
       working-directory: Experiment-16/frontend
       run: |
-        npx jest   # 🔥 FORCE RUN (fixes 127)
+        npm test
