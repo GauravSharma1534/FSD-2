@@ -1,11 +1,14 @@
 {
   "name": "frontend",
   "version": "1.0.0",
+  "description": "Experiment-16 Frontend",
   "main": "form.js",
   "scripts": {
     "test": "jest"
   },
+  "author": "Gaurav Sharma",
+  "license": "ISC",
   "devDependencies": {
-    "jest": "^29.0.0"
+    "jest": "^29.7.0"
   }
 }
