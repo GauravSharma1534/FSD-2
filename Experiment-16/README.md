@@ -167,15 +167,6 @@ CI/CD is implemented using GitHub Actions.
 
 ---
 
-## GitHub Actions Output
-
-### CI Summary
-![Summary](screenshots/ci-summary.png)
-
-### Full Run
-![Full Run](screenshots/ci-full-run.png)
-
----
 
 ## How to Run in VS Code
 
