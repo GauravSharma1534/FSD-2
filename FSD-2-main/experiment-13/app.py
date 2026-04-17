@@ -1,0 +1,124 @@
+from flask import Flask, request, jsonify
+from flask_sqlalchemy import SQLAlchemy
+from marshmallow import Schema, fields, validate, ValidationError
+
+app = Flask(__name__)
+
+app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///database.db'
+app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
+
+db = SQLAlchemy(app)
+
+# ===============================
+# Student Model
+# ===============================
+class Student(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    uid = db.Column(db.String(20), unique=True, nullable=False)
+    name = db.Column(db.String(100), nullable=False)
+    age = db.Column(db.Integer, nullable=False)
+
+    def to_dict(self):
+        return {
+            "id": self.id,
+            "uid": self.uid,
+            "name": self.name,
+            "age": self.age
+        }
+
+# ===============================
+# Validation Schema
+# ===============================
+class StudentSchema(Schema):
+    name = fields.Str(required=True, validate=validate.Length(min=2))
+    age = fields.Int(required=True, validate=validate.Range(min=1, max=120))
+    uid = fields.Str(required=True)
+
+student_schema = StudentSchema()
+student_update_schema = StudentSchema(partial=True)
+
+# ===============================
+# Error Handler
+# ===============================
+@app.errorhandler(ValidationError)
+def handle_validation_error(e):
+    return jsonify({"validation_errors": e.messages}), 400
+
+# ===============================
+# CREATE
+# ===============================
+@app.route('/students', methods=['POST'])
+def create_student():
+    try:
+        data = request.get_json()
+        validated_data = student_schema.load(data)
+
+        student = Student(**validated_data)
+        db.session.add(student)
+        db.session.commit()
+
+        return jsonify(student.to_dict()), 201
+
+    except Exception as e:
+        db.session.rollback()
+        return jsonify({"error": str(e)}), 500
+
+# ===============================
+# READ ALL
+# ===============================
+@app.route('/students', methods=['GET'])
+def get_students():
+    students = Student.query.all()
+    return jsonify([s.to_dict() for s in students])
+
+# ===============================
+# READ ONE
+# ===============================
+@app.route('/students/<int:id>', methods=['GET'])
+def get_student(id):
+    student = Student.query.get_or_404(id)
+    return jsonify(student.to_dict())
+
+# ===============================
+# UPDATE
+# ===============================
+@app.route('/students/<int:id>', methods=['PUT'])
+def update_student(id):
+    student = Student.query.get_or_404(id)
+    data = request.get_json()
+    validated_data = student_update_schema.load(data)
+
+    for key, value in validated_data.items():
+        setattr(student, key, value)
+
+    db.session.commit()
+    return jsonify(student.to_dict())
+
+# ===============================
+# DELETE
+# ===============================
+@app.route('/students/<int:id>', methods=['DELETE'])
+def delete_student(id):
+    student = Student.query.get_or_404(id)
+    db.session.delete(student)
+    db.session.commit()
+    return jsonify({"message": "Student deleted successfully"})
+
+# ===============================
+# HOME
+# ===============================
+@app.route('/')
+def home():
+    return jsonify({"message": "API Working ✅"})
+
+# ===============================
+# INIT DB (IMPORTANT)
+# ===============================
+with app.app_context():
+    db.create_all()
+
+# ===============================
+# RUN
+# ===============================
+if __name__ == '__main__':
+    app.run(debug=True)
