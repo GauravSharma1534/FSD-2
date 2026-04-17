@@ -1,191 +1,261 @@
-#  Experiment-16: Full Stack Testing & CI/CD
+# Experiment-16: Full Stack Testing & CI/CD
 
-##  Introduction
+## Introduction
+This project demonstrates a simple full-stack application with backend, frontend, testing, and CI/CD integration. It helps in understanding how real-world software systems are developed, tested, and deployed using automation tools.
 
-This project shows a simple full-stack application with backend, frontend, testing, and CI/CD.
-Backend is built using **Flask (Python)** and frontend using **Node.js (JavaScript)**.
-Testing is done using **Pytest** and **Jest**, and automation is handled using **GitHub Actions**.
+The backend is developed using Flask (Python), while the frontend is built using Node.js (JavaScript). Testing is performed using Pytest for backend and Jest for frontend. GitHub Actions is used to automate the testing process through a CI/CD pipeline.
 
----
-
-##  Objectives
-
-* Build a backend API using **Flask**
-* Create frontend logic using **JavaScript**
-* Perform unit testing using **Pytest and Jest**
-* Implement CI/CD pipeline
-* Understand real project workflow
+This experiment is designed to give hands-on experience in building a complete application with proper testing and automation practices.
 
 ---
 
-##  Technologies Used
-
-* **Python (Flask)** – Backend
-* **Pytest** – Backend Testing
-* **Node.js** – Frontend
-* **Jest** – Frontend Testing
-* **GitHub Actions** – CI/CD
-* **VS Code** – Development
+## Objectives
+- Build a backend API using Flask
+- Create frontend logic using JavaScript
+- Perform unit testing using Pytest
+- Perform unit testing using Jest
+- Understand CLI-based testing
+- Learn how CI/CD pipelines work
+- Automate testing using GitHub Actions
+- Understand project structure and organization
+- Learn debugging and error handling
+- Gain real-world development experience
 
 ---
 
-##  Project Structure
+## Technologies Used
+- Python (Flask) – Backend development
+- Pytest – Backend testing framework
+- Node.js – Frontend runtime
+- Jest – Frontend testing framework
+- GitHub Actions – CI/CD automation
+- Git – Version control system
+- VS Code – Development environment
 
-```
+---
+
+## Project Structure
+
 Experiment-16/
  ├── backend/
  │    ├── app.py
  │    ├── test_api.py
  │    └── requirements.txt
+ │
  ├── frontend/
  │    ├── form.js
  │    ├── form.test.js
  │    ├── package.json
  │    └── package-lock.json
- ├── .github/workflows/
- │    └── ci.yml
+ │
+ ├── screenshots/
+ │    ├── ci-summary.png
+ │    └── ci-full-run.png
+ │
+ ├── .github/
+ │    └── workflows/
+ │         └── ci.yml
+ │
  └── README.md
-```
 
 ---
 
-##  Backend Setup
+## Backend Development
 
-### Step 1: Go to backend
+The backend is created using Flask, a lightweight Python web framework.
 
-```
+### Features
+- Simple API creation
+- JSON response handling
+- Easy integration with testing tools
+
+### Example Functionality
+- API returns a JSON message
+- Status code verification
+
+---
+
+## Backend Setup
+
+Step 1: Navigate to backend folder
 cd Experiment-16/backend
-```
 
-### Step 2: Install dependencies
-
-```
+Step 2: Install dependencies
 pip install -r requirements.txt
-```
 
-### Step 3: Run tests
-
-```
+Step 3: Run the backend tests
 python -m pytest
-```
+
+---
+
+## Backend Testing (Pytest)
+
+Pytest is used to test backend APIs.
+
+### Purpose
+- Validate API responses
+- Check status codes
+- Ensure correct output
 
 ### Output
+- Tests pass successfully
+- Correct response from API
 
-* API returns JSON response
-* Test checks status code and data
+---
+
+## Frontend Development
+
+The frontend is developed using JavaScript.
+
+### Features
+- Simple form logic
+- Input handling
+- Output processing
 
 ---
 
 ## Frontend Setup
 
-### Step 1: Go to frontend
-
-```
+Step 1: Navigate to frontend folder
 cd Experiment-16/frontend
-```
 
-### Step 2: Install dependencies
-
-```
+Step 2: Install dependencies
 npm install
-```
 
-### Step 3: Run tests
-
-```
+Step 3: Run tests
 npm test
-```
+
+---
+
+## Frontend Testing (Jest)
+
+Jest is used for testing frontend functionality.
+
+### Purpose
+- Validate JavaScript functions
+- Ensure correct logic execution
+- Detect errors early
 
 ### Output
-
-* Function works correctly
-* Jest test passes
+- Test cases pass
+- Function returns correct values
 
 ---
 
-##  CI/CD Pipeline
+## CLI Testing
+
+All tests are performed using CLI (Command Line Interface).
+
+### Backend
+python -m pytest
+
+### Frontend
+npm test
+
+---
+
+## CI/CD Pipeline
+
+CI/CD is implemented using GitHub Actions.
 
 ### File Location
-
-```
 .github/workflows/ci.yml
-```
 
-### What it does
-
-* Runs on push and pull request
-* Installs backend dependencies
-* Runs Pytest
-* Installs frontend dependencies
-* Runs Jest
-
----
-
-##  How to Run in VS Code
-
-1. Open folder **Experiment-16**
-2. Open terminal (Ctrl + `)
-3. Run backend and frontend commands
-4. Check output
-
-
-
-
-
-## Common Errors & Fixes
-
-### pytest not recognized
-
-```
-python -m pytest
-```
-
-### package.json issue
-
-```
-npm init -y
-```
-
-### Wrong directory
-
-```
-cd Experiment-16
-```
+### Workflow Features
+- Automatically triggers on push
+- Installs backend dependencies
+- Runs Pytest
+- Installs frontend dependencies
+- Runs Jest
+- Displays results in GitHub Actions
 
 ---
 
-##  Conclusion
+## GitHub Actions Output
 
-This project helps in understanding full-stack development, testing, and automation.
-It provides practical knowledge of real-world software development workflow.
+### CI Summary
+![Summary](screenshots/ci-summary.png)
 
----
-
----
-
-##  Testing Summary
-
-| Layer    | Tool           | Purpose          |
-| -------- | -------------- | ---------------- |
-| Backend  | Pytest         | API testing      |
-| Frontend | Jest           | Function testing |
-| CI/CD    | GitHub Actions | Automation       |
+### Full Run
+![Full Run](screenshots/ci-full-run.png)
 
 ---
 
-##  Learning Outcomes
+## How to Run in VS Code
+
+- Open project folder in VS Code
+- Open terminal using Ctrl + `
+- Navigate to backend/frontend
+- Run commands
+- View output in terminal
+
+---
+
+## Common Errors and Solutions
+
+Error: pytest not recognized  
+Solution: python -m pytest  
+
+Error: npm not working  
+Solution: npm install  
+
+Error: wrong directory  
+Solution: cd Experiment-16  
+
+Error: jest not found  
+Solution: npm install --save-dev jest  
+
+---
+
+## Advantages of Testing
+
+- Improves code quality
+- Detects bugs early
+- Saves development time
+- Increases reliability
+- Ensures correct functionality
+
+---
+
+## Testing Summary
+
+Backend – Pytest – API testing  
+Frontend – Jest – Function testing  
+CI/CD – GitHub Actions – Automation  
+
+---
+
+## Learning Outcomes
 
 After completing this experiment, you will learn:
 
-* How to build backend using Flask
-* How to write tests using Pytest
-* How to test frontend using Jest
-* How to manage project structure
-* How to use npm and pip
-* How CI/CD pipeline works
-* How GitHub Actions automate testing
-* How to debug common errors
-* Importance of testing in development
-* Integration of frontend and backend
+- How to build backend using Flask  
+- How to test APIs using Pytest  
+- How to test frontend using Jest  
+- How to structure a full-stack project  
+- How to use Git and GitHub  
+- How CI/CD pipelines work  
+- How automation improves development  
+- How to debug common errors  
+- Importance of software testing  
 
 ---
+
+## Real-World Applications
+
+- Web application development
+- API testing
+- Automation pipelines
+- Software testing processes
+- DevOps practices
+
+---
+
+## Conclusion
+
+This experiment provides a complete understanding of full-stack development, testing, and CI/CD. It demonstrates how backend and frontend systems can be tested and automated using modern tools.
+
+The use of GitHub Actions ensures that testing is automated, reducing manual effort and improving reliability. This project is a good example of real-world software development workflow.
+
+---
+
