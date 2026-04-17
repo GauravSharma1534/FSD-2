@@ -6,7 +6,11 @@ def create_app():
     app = Flask(__name__)
 
     # Register Blueprints
+<<<<<<< HEAD
      app.register_blueprint(student_bp)
+=======
+    # app.register_blueprint(student_bp)
+>>>>>>> a003afd464fd86632aded825e50923d4ec091b18
 
     # Register Middlewares
     # register_middlewares(app)

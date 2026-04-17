@@ -1,5 +1,6 @@
 from flask import Blueprint, request, jsonify
 
+<<<<<<< HEAD
 # Explanation of the code structure and functionality:
 
 # This code defines a set of routes for managing student data in a Flask application. 
@@ -21,6 +22,21 @@ student_bp = Blueprint("students", __name__)
 # In-memory storage
 students = []
 current_id = 1
+=======
+student_bp = Blueprint("students", __name__)
+
+# In-memory storage
+students = [
+    {
+        "id": 1,
+        "name": "Gaurav Sharma",
+        "uid": "23bda70050",
+        "age": 21
+    }
+]
+
+current_id = 2
+>>>>>>> a003afd464fd86632aded825e50923d4ec091b18
 
 
 # CREATE
@@ -30,12 +46,21 @@ def create_student():
 
     data = request.get_json()
 
+<<<<<<< HEAD
     if not data or "name" not in data:
         return jsonify({"error": "Name is required"}), 400
+=======
+    if not data or "name" not in data or "uid" not in data:
+        return jsonify({"error": "Name and UID are required"}), 400
+>>>>>>> a003afd464fd86632aded825e50923d4ec091b18
 
     student = {
         "id": current_id,
         "name": data["name"],
+<<<<<<< HEAD
+=======
+        "uid": data["uid"],
+>>>>>>> a003afd464fd86632aded825e50923d4ec091b18
         "age": data.get("age", None)
     }
 
@@ -62,7 +87,10 @@ def get_student(student_id):
     return jsonify(student), 200
 
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> a003afd464fd86632aded825e50923d4ec091b18
 # UPDATE
 @student_bp.route("/students/<int:student_id>", methods=["PUT"])
 def update_student(student_id):
@@ -73,6 +101,10 @@ def update_student(student_id):
         return jsonify({"error": "Student not found"}), 404
 
     student["name"] = data.get("name", student["name"])
+<<<<<<< HEAD
+=======
+    student["uid"] = data.get("uid", student["uid"])
+>>>>>>> a003afd464fd86632aded825e50923d4ec091b18
     student["age"] = data.get("age", student["age"])
 
     return jsonify(student), 200
@@ -90,4 +122,8 @@ def delete_student(student_id):
 
     students = [s for s in students if s["id"] != student_id]
 
+<<<<<<< HEAD
     return jsonify({"message": "Deleted successfully"}), 200
+=======
+    return jsonify({"message": "Deleted successfully"}), 200
+>>>>>>> a003afd464fd86632aded825e50923d4ec091b18
