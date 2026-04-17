@@ -130,22 +130,7 @@ npm test
 
 
 
-##  Learning Outcomes
 
-After completing this experiment, you will learn:
-
-* How to build backend using Flask
-* How to write tests using Pytest
-* How to test frontend using Jest
-* How to manage project structure
-* How to use npm and pip
-* How CI/CD pipeline works
-* How GitHub Actions automate testing
-* How to debug common errors
-* Importance of testing in development
-* Integration of frontend and backend
-
----
 
 ## Common Errors & Fixes
 
@@ -185,5 +170,22 @@ It provides practical knowledge of real-world software development workflow.
 | Backend  | Pytest         | API testing      |
 | Frontend | Jest           | Function testing |
 | CI/CD    | GitHub Actions | Automation       |
+
+---
+
+##  Learning Outcomes
+
+After completing this experiment, you will learn:
+
+* How to build backend using Flask
+* How to write tests using Pytest
+* How to test frontend using Jest
+* How to manage project structure
+* How to use npm and pip
+* How CI/CD pipeline works
+* How GitHub Actions automate testing
+* How to debug common errors
+* Importance of testing in development
+* Integration of frontend and backend
 
 ---

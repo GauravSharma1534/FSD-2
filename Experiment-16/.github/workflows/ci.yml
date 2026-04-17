@@ -2,47 +2,43 @@ name: CI Pipeline
 
 on:
   push:
-    branches: [ main ]
   pull_request:
-    branches: [ main ]
 
 jobs:
-  build:
-
+  test:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Checkout code
-      uses: actions/checkout@v3
+    - uses: actions/checkout@v3
 
-    # Backend setup
-    - name: Set up Python
+    # Backend
+    - name: Setup Python
       uses: actions/setup-python@v4
       with:
         python-version: '3.10'
 
     - name: Install backend dependencies
       run: |
-        cd backend
+        cd Experiment-16/backend
         pip install -r requirements.txt
 
     - name: Run backend tests
       run: |
-        cd backend
-        pytest
+        cd Experiment-16/backend
+        python -m pytest
 
-    # Frontend setup
-    - name: Set up Node.js
+    # Frontend
+    - name: Setup Node
       uses: actions/setup-node@v3
       with:
         node-version: '18'
 
     - name: Install frontend dependencies
       run: |
-        cd frontend
+        cd Experiment-16/frontend
         npm install
 
     - name: Run frontend tests
       run: |
-        cd frontend
-        npm test
+        cd Experiment-16/frontend
+        npm run test
