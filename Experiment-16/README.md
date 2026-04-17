@@ -36,33 +36,25 @@ This experiment is designed to give hands-on experience in building a complete a
 
 ## Project Structure
 
----
+## Project Structure
 
 Experiment-16/
- ├── backend/
- │    ├── app.py
- │    ├── test_api.py
- │    └── requirements.txt
- │
- ├── frontend/
- │    ├── form.js
- │    ├── form.test.js
- │    ├── package.json
- │    └── package-lock.json
- │
- ├── screenshots/
- │    ├── ci-summary.png
- │    └── ci-full-run.png
- │
- ├── .github/
- │    └── workflows/
- │         └── ci.yml
- │
- └── README.md
-
- ---
-
----
+├── backend/
+│   ├── app.py
+│   ├── test_api.py
+│   └── requirements.txt
+├── frontend/
+│   ├── form.js
+│   ├── form.test.js
+│   ├── package.json
+│   └── package-lock.json
+├── screenshots/
+│   ├── ci-summary.png
+│   └── ci-full-run.png
+├── .github/
+│   └── workflows/
+│       └── ci.yml
+└── README.md
 
 ## Backend Development
 
