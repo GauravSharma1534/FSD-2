@@ -36,6 +36,8 @@ This experiment is designed to give hands-on experience in building a complete a
 
 ## Project Structure
 
+---
+
 Experiment-16/
  ├── backend/
  │    ├── app.py
@@ -57,6 +59,8 @@ Experiment-16/
  │         └── ci.yml
  │
  └── README.md
+
+ ---
 
 ---
 
