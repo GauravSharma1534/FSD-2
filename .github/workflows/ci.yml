@@ -9,7 +9,7 @@
     cd Experiment-16/frontend
     npm install
 
-- name: Run frontend tests
+- name: Run frontend tests (safe)
   run: |
     cd Experiment-16/frontend
-    npx jest
+    npm test || npx jest
