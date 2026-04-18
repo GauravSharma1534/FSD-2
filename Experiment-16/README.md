@@ -34,10 +34,9 @@ This experiment is designed to give hands-on experience in building a complete a
 
 ---
 
-## Project Structure
+# Project Structure #
 
-## Project Structure
-
+```
 Experiment-16/
 ├── backend/
 │   ├── app.py
@@ -55,6 +54,7 @@ Experiment-16/
 │   └── workflows/
 │       └── ci.yml
 └── README.md
+```
 
 ## Backend Development
 
